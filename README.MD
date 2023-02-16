@@ -28,6 +28,7 @@ Tags are critical to managing AWS resources at scale. Awstaghelper provides a co
   * [Iam Role](#iam-role)
   * [Elastic Beanstalk](#elastic-beanstalk)
   * [ECR](#ecr)
+  * [AutoScaling groups](#autoscaling-groups)
 * [Global parameters](#global-parameters)
 * [Contributing](#contributing)
 * [License](#license)
@@ -305,6 +306,22 @@ Example:
 Read csv and tag ecr - `awstaghelper ecr tag-repository`  
 Example:
 `awstaghelper ecr tag-repository --filename ecrTag.csv --profile main`  
+
+### AutoScaling groups
+
+#### Get ASG tags
+
+Get list of ASGs with required tags - `awstaghelper asg get-asg-tags`
+
+Example:
+`awstaghelper asg get-asg-tags --filename asgTags.csv --tags Name,Owner --profile main`
+
+#### Tag ASGs
+
+Read csv and tag ASGs - `awstaghelper asg tag-asg`
+
+Example:
+`awstaghelper asg tag-asg --filename asgTags.csv --profile main`
 
 ## Global parameters
 
